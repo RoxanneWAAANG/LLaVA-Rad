@@ -14,9 +14,10 @@ prediction_file=$prediction_dir/test
 run_name="${4:-llavarad}"
 
 
-# query_file=/PATH_TO/physionet.org/files/llava-rad-mimic-cxr-annotation/1.0.0/chat_test_MIMIC_CXR_all_gpt4extract_rulebased_v1.json
+query_file=/home/jack/Projects/yixin-llm/LLaVA-Rad/scripts/evaluation.json
 
-# image_folder=/PATH_TO/physionet.org/files/mimic-cxr-jpg/2.0.0/files
+image_folder=/home/jack/Projects/yixin-llm/yixin-llm-data/LLaVA-Rad/datasets/image
+
 loader="mimic_test_findings"
 conv_mode="v1"
 
@@ -49,3 +50,12 @@ WANDB_PROJECT="llava" WANDB_RUN_ID="llava-eval-$(date +%Y%m%d%H%M%S)" WANDB_RUN_
 popd
 
 rm mimic_cxr_preds.jsonl
+
+# {
+#     "id": "test_001",
+#     "image": "/home/jack/Projects/yixin-llm/yixin-llm-data/LLaVA-Rad/datasets/image/CXR1_1_IM-0001-3001.png", 
+#     "conversations": [
+#       {"role": "human", "value": "<image> provide a description of the findings in the radiology image given the following indication: __-year-old male with history c etastatic melanoma, presenting with confusion and somnolence. evaluate for acute cardiopulmonary proces"},
+#       {"role": "assistant", "value": ""}
+#     ]
+#   }

@@ -77,7 +77,6 @@ def eval_model(
     logger = build_logger("model_mimic_cxr", f"logs/model_mimic_cxr_{chunk_idx}.log")
 
 
-
     # load model
     disable_torch_init()
     model_path = os.path.expanduser(model_path)

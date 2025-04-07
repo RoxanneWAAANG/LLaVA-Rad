@@ -10,7 +10,7 @@ def download_llava_rad():
     print("Starting to download LLaVA-RAD model...")
     
     # Create a directory to store the model
-    target_path = "/home/jack/Projects/yixin-llm/yixin-llm-data/LLaVA-Rad"
+    target_path = "/home/jack/Projects/yixin-llm/yixin-llm-data/LLaVA-Rad/llava-rad"
     os.makedirs(target_path, exist_ok=True)
     
     # Download the model snapshot
@@ -47,3 +47,5 @@ def load_and_verify_model(model_path):
 if __name__ == "__main__":
     model_path = download_llava_rad()
     success = load_and_verify_model(model_path)
+
+# find /home/jack/Projects/yixin-llm/yixin-llm-data/LLaVA-Rad/datasets -maxdepth 1 -type f -name "*.png" -delete
